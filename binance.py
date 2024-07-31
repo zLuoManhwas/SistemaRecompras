@@ -2,7 +2,7 @@ from binance.client import Client
 from binance.exceptions import BinanceAPIException
 import os
 
-# Configura tus claves API aquí
+# Configura tus claves API aca
 API_KEY = 'tu_api_key'
 API_SECRET = 'tu_api_secret'
 
@@ -18,7 +18,7 @@ def obtener_saldo_futuros_usdt():
         print(f"Saldo total disponible en futuros: {saldo} USDT")
         
     except BinanceAPIException as e:
-        print(f"Error en la conexión con Binance API: {e}")
+        print(f"Error en la conexion con Binance API: {e}")
 
 if __name__ == "__main__":
     obtener_saldo_futuros_usdt()
