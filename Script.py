@@ -1,3 +1,5 @@
+import subprocess
+
 def select_exchange():
     print("Selecciona el exchange que quieres usar:")
     print("1. Binance")
@@ -18,28 +20,16 @@ def select_exchange():
 
     return exchange
 
-def handle_binance():
-    print("Configurando Binance...")
-    # el codigo para cada exchange
-
-def handle_bybit():
-    print("Configurando Bybit...")
-    # el codigo para cada exchange
-
-def handle_bitget():
-    print("Configurando Bitget...")
-    # el codigo para cada exchange
-
 def main():
     selected_exchange = select_exchange()
     print(f"Has seleccionado: {selected_exchange}")
 
     if selected_exchange == 'Binance':
-        handle_binance()
+        subprocess.run(['python', 'binance.py'])
     elif selected_exchange == 'Bybit':
-        handle_bybit()
+        subprocess.run(['python', 'bybit.py'])
     elif selected_exchange == 'Bitget':
-        handle_bitget()
+        subprocess.run(['python', 'bitget.py'])
 
 if __name__ == "__main__":
     main()
