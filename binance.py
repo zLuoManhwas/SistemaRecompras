@@ -6,15 +6,14 @@ import os
 API_KEY = 'tu_api_key'
 API_SECRET = 'tu_api_secret'
 
-# Crea una instancia del cliente de Binance
 client = Client(API_KEY, API_SECRET)
 
 def obtener_saldo_futuros_usdt():
     try:
-        # Conéctate al cliente de futuros
+        # Conctate al cliente de futuros
         futures_client = client.futures_account()
         
-        # Obtén el saldo en futuros
+        # Obten el saldo en futuros
         saldo = futures_client['totalWalletBalance']
         print(f"Saldo total disponible en futuros: {saldo} USDT")
         
